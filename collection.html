@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIE</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="icon" href="media/Favicon.svg">
+</head>
+
+<body>
+
+    <!---------------- HEADER -------------->
+    <header>
+
+    </header>
+
+
+    <main>
+        <section class="collection section">
+            <div class="collection__block block">
+                <div class="image__content collection__content">
+                    <picture class="picture">
+                        <source srcset="media/Collection-1.avif" type="image/avif">
+                        <source srcset="media/Collection-1.webp" type="image/webp">
+                        <img class="image" src="media/Collection-1.jpg">
+                    </picture>
+                    <picture>
+                        <source srcset="media/Collection-1-hover.avif" type="image/avif">
+                        <source srcset="media/Collection-1-hover.webp" type="image/webp">
+                        <img class="image image-hover" src="media/Collection-1-hover.jpg">
+                    </picture>
+                    <div class="title collection__title">
+                        <div class="title-row">
+                            <h4>EL DRAMA</h4>
+                            <h4>ESTÉTICO</h4>
+                            <h4>DE LOS</h4>
+                        </div>
+                        <div class="title-row">
+                            <h4>CONTENEDORES</h4>
+                            <h4>DE</h4>
+                            <h4>BASURA</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!---------------- FOOTER ---------------->
+    <footer class="footer section">
+        <div class="footer__block block">
+            <div class="footer__left">
+                <ul class="footer__links">
+                    <li><a href="#">ARCHIVO DEL DÍA<i class="ri-arrow-right-up-line"></i></a></li>
+                    <li><a href="collection.html">COLECCIÓN<i class="ri-arrow-right-up-line"></i></a></li>
+                    <li><a href="#">ARCHIVO ALEATORIO<i class="ri-arrow-right-up-line"></i></a></li>
+                    <li><a href="about.html">ABOUT US<i class="ri-arrow-right-up-line"></i></a></li>
+                </ul>
+                <ul class="footer__social">
+                    <li><span>SÍGUENOS</span></li>
+                    <li><a href="#">INSTAGRAM<i class="ri-arrow-right-up-line"></i></a></li>
+                </ul>
+                <a class="heading-h1 logo__footer" href="#">ARCHIE</a>
+            </div>
+            <div class="footer__right">
+                <div class="footer__content">
+                    <div class="form__title">
+                        <div class="form__title-row">
+                            <h2>¿TIENES</h2>
+                            <h2>ALGO</h2>
+                        </div>
+                        <div class="form__title-row">
+                            <h2>MÁS QUE</h2>
+                            <h2>AÑADIR?</h2>
+                        </div>
+                    </div>
+                    <p class="span">¿Algún tema que te ronda la cabeza? ¿Alguna historia absurda que necesitamos conocer? Somos todo oídos. Aceptamos ideas, curiosidades y obsesiones de dudosa importancia. Nunca se sabe cuándo pueden acabar convertidas en nuestro próximo artículo.</p>
+                </div>
+
+                <form class="form" action="#" method="post">
+                    <div class="form__block">
+                        <div class="form__field">
+                            <label for="name">Nombre</label>
+                            <input id="name" name="name" type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="form__field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form__field">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" placeholder="Mensaje" rows="4" required></textarea>
+                        </div>
+                        <div class="form__field">
+                            <label for="source">Fuente</label>
+                            <input id="source" name="source" type="url" placeholder="Fuente" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-light">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

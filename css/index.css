@@ -1,6 +1,5 @@
-/*********************************************************/
+
 /********************** TIPOGRAFÍAS **********************/
-/*********************************************************/
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -14,9 +13,10 @@
 
 
 :root {
-    /***** SIZES *****/
+    /********** SIZES **********/
     --size-block: 80rem;
     --size-canvas: 100vw;
+
 
     --size-xxs: .5rem;
     --size-xs: 1rem;
@@ -26,109 +26,116 @@
     --size-xl: 3rem;
     --size-xxl: 4.5rem;
 
-    /***** COLORES *****/
+
+    /********** COLORES **********/
     --color-light: #FDFBF9;
     --color-dark: #1C1C1C;
     --color-yellow: #FCF496;
     --color-green: #686852;
 
-    /***** FONTS *****/
-    --font-header: 700 1.5rem "IBM Plex Mono", monospace;
-    --font-h1: 400 clamp(3.5rem, 5vw, 6rem) "IBM Plex Mono", monospace;
-    --font-h2: 600 clamp(2.5rem, 5vw, 3.5rem) "Overused Grotesk", sans-serif;
-    --font-h2-mono: 400 clamp(2rem, 5vw, 2.5rem) "IBM Plex Mono", monospace;
-    --font-h3: 600 clamp(1.25rem, 5vw, 2rem) "Overused Grotesk", sans-serif;
-    --font-h4: 200 clamp(1.125rem, 5vw, 1.5rem) "Overused Grotesk", sans-serif;
 
-    --font-span: 200 1rem "IBM Plex Mono", monospace;
+    /********** FONTS **********/    
+    --font-h1: 400 clamp(3rem, 5vw, 6rem) "IBM Plex Mono", monospace;
+
+    --font-h2: 600 clamp(1.5rem, 5vw, 3rem) "Overused Grotesk", sans-serif;
+    --font-h2-mono: 400 clamp(2rem, 5vw, 2.5rem) "IBM Plex Mono", monospace;
+
+    --font-h3: 600 clamp(1rem, 5vw, 1.5rem) "Overused Grotesk", sans-serif;
+    --font-h3-mono: 400 clamp(1rem, 5vw, 1.5rem) "IBM Plex Mono", monospace;
+
+    --font-h4: 500 1.125rem "Overused Grotesk", sans-serif;
 
     --font-p: 300 1.125rem "Overused Grotesk", sans-serif;
+    --font-p-mono: 400 1.125rem "IBM Plex Mono", monospace;
+
     --font-link: 300 1rem "IBM Plex Mono", monospace;
     --font-menu-link: 300 clamp(1.5rem, 5vw, 2rem) "IBM Plex Mono", monospace;
-    
+
+    --font-span: 200 1rem "IBM Plex Mono", monospace;
 }
 
 
-/*****************************************************/
-/********************** GENERAL **********************/
-/*****************************************************/
 
+/********************** GENERAL **********************/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Overused Grotesk", sans-serif; }
+    font-family: "Overused Grotesk", sans-serif;
+}
 
 img {
     max-width: 100%;
     width: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    display: block;
+}
 
 a {
     color: inherit;
-    text-decoration: none; }
+    text-decoration: none;
+}
 
 ul, ol {
-    list-style: none; }
+    list-style: none;
+}
 
 
 
-
-/********************************************************/
 /********************** COMPONENTS **********************/
-/********************************************************/
-
 
 /********** ENCABEZADOS **********/
 
 h1, .heading-h1 {
     font: var(--font-h1);
-    letter-spacing: 2.56px;
-    line-height: 1.4;
-}
-
-.heading-h2-mono {
-    font: var(--font-h2-mono);
-    letter-spacing: 2.56px;
-    line-height: 1.4;
+    letter-spacing: .3rem;
 }
 
 h2, .heading-h2 {
     font: var(--font-h2);
-    letter-spacing: 2.56px;
-    line-height: 1.4;
+    letter-spacing: .3rem;
+}
+
+h2.mono {
+    font: var(--font-h2-mono);
+    letter-spacing: .16rem;
 }
 
 h3, .heading-h3 {
     font: var(--font-h3);
-    letter-spacing: 2.56px;
-    line-height: 1.4;
+    letter-spacing: .15rem;
+}
+
+h3.mono {
+    font: var(--font-h3-mono);
+    letter-spacing: .16rem;
 }
 
 h4, .heading-h4 {
     font: var(--font-h4);
-    letter-spacing: 2.56px;
-    line-height: 1.4; 
-}
-
-.font-header {
-    font: var(--font-menu-link);
+    letter-spacing: .15rem;
 }
 
 
 
 /********** TEXTOS **********/
-span {
+span, .span {
     font: var(--font-span);
-    letter-spacing: 1.8px;
-    line-height: 1.4; 
+    letter-spacing: .0875rem;
 }
 
 p, li, .font-p {
     font: var(--font-p);
-    letter-spacing: 1.8px;
-    line-height: 1.4; 
+    text-align: justify;
+    letter-spacing: .1125rem;
 }
+
+p.mono {
+    font: var(--font-p-mono);
+    text-align: justify;
+    letter-spacing: .1125rem;
+}
+
 
 
 
@@ -136,9 +143,8 @@ p, li, .font-p {
 
 a.link {
     font: var(--font-link);
-    letter-spacing: 1.8px; 
-
     opacity: 100%;
+    letter-spacing: .1125rem;
 
     &:hover {
         opacity: 30%;
@@ -147,27 +153,29 @@ a.link {
     transition: opacity 200ms;
 }
 
-a.btn {
+a.btn, button {
     font: var(--font-link);
-    letter-spacing: 1.8px;
+    letter-spacing: .1125rem;
 
-    padding: var(--size-xxs) var(--size-xxl);
+    padding: var(--size-xs) var(--size-xxl);
 
     display: inline-flex;
     gap: var(--size-xs);
     align-items: center;
+    justify-content: center;
 
-    background-color: var(--color-green);
-    color: var(--color-yellow); 
+    border: none;
 
     opacity: 100%;
 
-    & .btn-dark{
-
+    &.btn-dark{
+        background-color: var(--color-green);
+        color: var(--color-yellow); 
     }
     
-    & .btn-light{
-
+    &.btn-light{
+        background-color: var(--color-yellow);
+        color: var(--color-green);
     }
     
 
@@ -179,9 +187,8 @@ a.btn {
 }
 
 a.menu-link {
-    font: var(--font-header);
-    letter-spacing: 8px; 
-
+    font: var(--font-menu-link);
+    letter-spacing: .5rem; 
     opacity: 100%;
 
     &:hover {
@@ -193,20 +200,581 @@ a.menu-link {
 
 
 
-/********** TAMAÑOS **********/
+
+/********** FORM **********/
+
+input, textarea {
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: var(--color-dark);
+    color: var(--color-light);
+
+    border: none;
+    border-bottom: 1px solid var(--color-light);
+    padding: var(--size-sm) 0 var(--size-xxs);
+
+    font: var(--font-span);
+
+    &:hover {
+        opacity: 80%;
+    }
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid var(--color-yellow);
+    }
+    
+    &::placeholder {
+        font: var(--font-span);
+        color: var(--color-light);
+        opacity: 50%;
+    }
+
+    transition: opacity 250ms, border 250ms;
+}
+
+label {
+    display: none;
+}
+
+
+
+
+
+/********** SECCIONES & BLOQUES **********/
 
 .section {
     max-width: var(--size-canvas);
     margin: 0 auto;
+    padding: var(--size-xxl) var(--size-md);
 }
 
 .block {
     max-width: var(--size-block);
     margin: 0 auto;
-    padding: var(--size-md) var(--size-xxs);
+
 }
 
 
+
+
+/********** ROWS **********/
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.span-row, .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1;
+}
+
+
+
+/********** IMÁGENES **********/
+
+.image__content {
+    position: relative;
+}
+
+
+.image-hover {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 300ms;
+
+    &:hover {
+        opacity: 100%;
+    }
+}
+
+
+
+/****************************************************/
+/********************** HEADER **********************/
+/****************************************************/
+
+
+
+
+
+
+
+
+/********************** HERO **********************/
+
+.hero__block {
+    min-height: 90vh;
+    position: relative;
+}
+
+.hero__image {
+    position: absolute;
+    box-shadow: 2px 2px 10px rgba(28, 28, 28, 0.3);
+}
+
+.moneda-cleo {
+    width: 9.375rem;
+    top: 2%;
+    left: 5%;
+    z-index: 3;
+    box-shadow: none;
+}
+
+.postit__negro-farola {
+    width: 17.5rem;
+    top: 0%;
+    left: 18%;
+    transform: rotate(16.149deg);
+    z-index: 2;
+    box-shadow: none;
+}
+
+.foto__caras {
+    width: 21.875rem;
+    top: 10%;
+    left: 35%;
+    transform: rotate(-2.746deg);
+    z-index: 5;
+}
+
+.postit__amarillo-silla {
+    width: 17.5rem;
+    top: 5%;
+    right: 20%;
+    transform: rotate(-22.99deg);
+    z-index: 1;
+}
+
+.postit__verde {
+    width: 17.5rem;
+    top: 0%;
+    right: 3%;
+    transform: rotate(-7.29deg);
+    z-index: 0;
+    box-shadow: none;
+}
+
+.foto-niña {
+    width: 17.5rem;
+    top: 18%;
+    left: 2%;
+    z-index: 0;
+}
+
+.foto-emu {
+    width: 23.125rem;
+    top: 43%;
+    left: 23%;
+    transform: rotate(5.897deg);
+    z-index: 3;
+}
+
+.moneda-julio {
+    width: 9.375rem;
+    top: 41%;
+    left: 57%;
+    z-index: 5;
+    box-shadow: none;
+}
+
+.foto-barba {
+    width: 16.25rem;
+    top: 30%;
+    right: 2%;
+    transform: rotate(5.867deg);
+    z-index: 3;
+}
+
+.sello {
+    width: 10.625rem;
+    top: 45%;
+    left: 1%;
+    transform: rotate(-7.83deg);
+    box-shadow: none;
+    z-index: 3;
+}
+
+.postit-granada {
+    width: 15.625rem;
+    top: 60%;
+    left: 9%;
+    transform: rotate(7.571deg);
+    z-index: 0;
+}
+
+.postit-caravaggio {
+    width: 15.3125rem;
+    bottom: 5%;
+    left: 35%;
+    z-index: 3;
+}
+
+.postit__amarillo-romano {
+    width: 17.5rem;
+    bottom: 13%;
+    right: 30%;
+    transform: rotate(-10.534deg);
+    z-index: 2;
+    box-shadow: none;
+}
+
+.postit__negro-cosas {
+    width: 17.5rem;
+    bottom: 9%;
+    right: 12%;
+    transform: rotate(12.013deg);
+    z-index: 1;
+    box-shadow: none;
+}
+
+.foto-señor {
+    width: 13.4375rem;
+    bottom: 10%;
+    right: 1%;
+    z-index: 0;
+}
+
+
+
+
+
+/********************** YELLOW **********************/
+
+.yellow {
+    background-color: var(--color-yellow);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.yellow__block {
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxl);
+}
+
+.yellow__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    height: 30rem;
+}
+
+.yellow__image {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/********************** INFO **********************/
+
+.info__block {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.info__card {
+    padding: var(--size-xxl);
+
+    background-image: url(../media/Home-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform: rotate(-3.353deg);
+
+    color: var(--color-yellow);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxs);
+
+    box-shadow: 4px 4px 10px rgba(28, 28, 28, 0.5);
+}
+
+.info__heading {
+    max-width: 60%;
+}
+
+
+
+
+
+
+
+/********************** LAST **********************/
+
+.last__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--size-md);
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.last__card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+}
+
+.last__card:nth-child(1) {
+    grid-column: 1 / 2;
+
+    @media (max-width: 768px) {
+        grid-column: 1;
+        grid-row: auto;;
+    }
+
+}
+
+.last__card:nth-child(2) {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+
+    @media (max-width: 768px) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+
+.last__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.last__image {
+    &:hover {
+
+    }
+}
+
+
+/********************** COLECCIÓN **********************/
+
+.collection__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.collection__postit {
+    position: absolute;
+
+    background-color: var(--color-yellow);
+    padding: var(--size-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxl);
+
+    box-shadow: 4px 4px 10px rgba(28, 28, 28, 0.5);
+}
+
+.collection__postit-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxs);
+}
+
+.collection__postit-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/********************** FAVORITOS **********************/
+
+.favorites__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxl);
+}
+
+.favorites__text {
+    display: flex;
+    justify-content: end;
+
+    & p {
+        width: 50%;
+        text-align: justify;
+    }
+}
+
+.favorites__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
+    gap: var(--size-lg);
+}
+
+.favorites__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+}
+
+
+
+
+
+
+
+/*********************** ABOUT US **********************/
+
+.about {
+    min-height: 100vh;
+}
+
+.about__block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: var(--size-lg);
+
+    position: relative;
+
+    & p {
+        width: 70%;
+    }
+}
+
+.about__title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxs);
+
+    width: 80%;
+    text-transform: uppercase;
+
+    & h3 {
+        font-family: "IBM Plex Mono";
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 600;
+    }
+
+    & h4 {
+        text-align: right;
+        font-family: "IBM Plex Mono";
+        font-size: clamp(1rem, 5vw, 3rem);
+        font-weight: 500;
+    }
+
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+
+
+
+
+/************************ FOOTER ***********************/
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.footer__block {
+    min-height: 85vh;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--size-xl);
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__social, .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+}
+
+.logo__footer {
+    display: inline;
+    font-size: 6.25rem;
+    letter-spacing: 3.4375rem;
+    line-height: 0.8;
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+}
+
+.form__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+
+.form__title-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xl);
+
+}
+
+.form__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxs);
+}
 
 
 
@@ -219,4 +787,7 @@ a.menu-link {
     lg → 40px
     xl → 48 px
     xxl → 56px
+
+    --size-block: 1280px;
 */
+
